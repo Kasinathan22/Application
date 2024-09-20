@@ -15,7 +15,7 @@ const Footer = () => {
       <footer
         className="bg-black  text-gray-100 py-12 mt-[-100px] md:mt-[-50px] lg:mt-[-50px] relative"
         style={{
-          backgroundImage: `url(${Footermainbg.src})`, // Use the Footermainbg image as a background
+          // Use the Footermainbg image as a background
           backgroundSize: 'contain', // Adjust size to fit within the container
           backgroundPosition: 'top right', // Align the image to the top-right corner
           backgroundRepeat: 'no-repeat', // Prevent the image from repeating
@@ -27,26 +27,24 @@ const Footer = () => {
         <div className="container mx-auto px-9">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-8 md:mb-0 md:flex-1">
-              <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-6xl font-bold mb-4 py-12 md:py-10">Lets make something<br /><span className='text-orange-600   '> great together</span></h2>
+              <h2 className=" text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold mb-4 py-12 md:py-10 px-5">Lets make something<br /><span className='text-orange-600   '> great together</span></h2>
+<h2 className='text-white'>
+Bangalore, Karnataka 
 
+</h2>
+<p className='text-white pt-5'>
+Phone: +91 88888888 <br />
+Email: sell@bazaar.in</p>
             </div>
-            <div className="flex flex-col md:flex-row md:ml-auto md:space-x-10">
-              <div className="mb-8 md:mb-0 md:flex-1">
+            <div className="flex flex-col md:flex-row ml-40 ">
+              <div className="mb-8 md:mb-0 md:flex-1 ">
                 <h2 className="text-xl font-bold mb-4">Services</h2>
                 <ul className="text-gray-300">
                   <li className="mb-2"><Link href="/Section/Digitalmarket">Sell Phone</Link></li>
                   <li className="mb-2"><Link href="/Section/ECommerce">Sell Television</Link></li>
                   <li className="mb-2"><Link href="/Section/Seo">Sell Smart Watch
                   </Link></li>
-                  <li className="mb-2"><Link href="/Section/LeadGenServices">Sell Smart Speakers
-                  </Link></li>
-                  <li className="mb-2"><Link href="/Section/MobileApp">Sell Smart Speakers                  </Link></li>
-                  <li className="mb-2"><Link href="/Section/MobileAppPromo">Sell DSLR Camera</Link></li>
-                  <li className="mb-2"><Link href="/Section/Social">Sell Earbuds</Link></li>
-                  <li className="mb-2"><Link href="#">Repair Phone</Link></li>
-                  <li className="mb-2"><Link href="/Section/Webdev">Buy Phone</Link></li>
-                  <li className="mb-2"><Link href="#">Recycle Phone</Link></li>
-                  <li className="mb-2"><Link href="#">Find New Phone</Link></li>
+                 
                 </ul>
               </div>
 
@@ -69,7 +67,7 @@ const Footer = () => {
           </div>
 
 
-          <div className="mt-8 border-t border-gray-800 pt-8 text-center text-gray-400">
+          <div className="mt-8 pl-20 border-t border-gray-800 pt-8 text-center text-gray-400">
             <div className="mt-8 flex justify-between items-center">
               <div className="flex flex-wrap gap-4 text-sm md:text-base">
                 <a href="#" className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-full">

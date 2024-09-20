@@ -60,7 +60,7 @@ const Sales = () => {
       />
     </div>
 
-    <div className='py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6'>
+    <div className='py-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-2'>
         {containerData.map((container) => (
         <div key={container.id} className="bg-white shadow-md rounded-lg p-4 flex flex-col ">
         <div className="flex justify-center items-center "> 
@@ -86,8 +86,8 @@ const Sales = () => {
     ))}
     </div>
     
-    <div className='rounded-lg border-2 border-black bg-black h-5 w-32 flex items-center justify-center'>
-  <h1 className='text-xs text-white text-center'>
+    <div className='rounded-lg border-2 border-black bg-black h-5 w-24 md:lg:w-32 flex items-center justify-center'>
+  <h1 className='text-[9px] md:lg:text-xs text-white text-center'>
     Apple Bumper Sales
   </h1>
 </div>
@@ -98,7 +98,7 @@ const Sales = () => {
   <p className="text-gray-500">{container.discount}</p>
 </div>
 
-    <div className='rounded-2xl  text-center border-2 border-yellow-400 bg-yellow-400 h-7 w-20'><button className='text-sm'>Add to cart</button></div>
+    <div className='rounded-2xl text-center border-2 border-yellow-400 bg-yellow-400 h-7 w-24'><button className='text-sm'>Add to cart</button></div>
     </div>
         ))}
       </div>

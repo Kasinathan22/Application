@@ -68,7 +68,7 @@ const Hero = () => {
   return (
     <div className='h-full w-full'>
       {/* Header */}
-      <div className='pt-24 md:lg:pt-36 '>
+      <div className='pt-24 md:lg:pt-5 '>
         <div className='h-12 w-full bg-gre flex justify-center items-center'>
           <h1 className='text-black font-bold text-sm md:text-xl lg:text-xl text-center'>
           India&apos;s Largest Refurbished Mobile Phone Store
@@ -81,7 +81,7 @@ const Hero = () => {
       <div className='pt-16 md:lg:pt-14 md:lg:pb-20 ' style={containerStyle}>
         <div  style={contentStyle}>
           {images.map((image, index) => (
-            <div key={index} className='h-32 md:lg:h-full w-full flex-shrink-0'>
+            <div key={index} className='h-32 md:lg:h-full rounded-3xl w-full flex-shrink-0'>
               <img
                 src={image.src}
                 alt={`post ${index}`}

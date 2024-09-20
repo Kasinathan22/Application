@@ -9,7 +9,8 @@ import lo from '../../../../public/image/location.svg';
 
 const Navbar = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-    // Function to handle button click
+  const [isOpen, setIsOpen] = useState(false);
+
     const toggleDropdown = () => {
       setDropdownVisible(!dropdownVisible);
   };
@@ -99,8 +100,9 @@ const Navbar = () => {
     ];
 
     return (
+        <div>
         <div className="fixed top-0 left-0 w-full z-50">
-            <nav className="bg-white shadow-lg">
+            <nav className="bg-white">
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center py-4">
                         <div className="flex items-center space-x-4 w-16 md:lg:w-auto">
@@ -115,14 +117,14 @@ const Navbar = () => {
                                 className="w-32 md:lg:w-96 h-10 md:lg:h-auto p-3 border-2 border-gray-300 rounded-3xl focus:outline-none focus:border-green-400"
                                 placeholder="Search products..."
                             />
-                            <div className='hidden md:block lg:block'>
+                            {/* <div className='hidden md:block lg:block'>
                              <button onClick={toggleDropdown} className=" pt-3 flex items-center text-sm font-semibold text-gray-700 hover:text-blue-700 transition ease-linear duration-300">
                                             Services
                                             <svg className="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                             </svg>
                                             </button>
-                                            </div>
+                                            </div> */}
                         </div>
 
 
@@ -159,42 +161,81 @@ const Navbar = () => {
                             <div className="container px-4 mx-auto">
                                 <div className="flex flex-wrap">
                                     <div className="w-5/12 pt-4 pr-3 pb-6">
-                                        <h4 className="mb-2 text-alternatives-gray text-xs uppercase font-semibold">Shuffle’s design systems</h4>
-                                        <div className="flex flex-wrap -m-1">
+                                        <h4 className="mb-2 text-alternatives-gray text-xs uppercase font-semibold">Services</h4>
+
+
+
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  -m-1">
                                             <div className="w-full p-1">
                                                 <a className="p-3 flex items-center hover:bg-brand-section-light rounded shuffle-click" href="/Section/AllServices" data-category="" data-action="click-navigation" data-label="browse-libraries" previewlistener="true">
                                                     <div className="flex items-center justify-center w-10 h-10 mr-2 rounded bg-menu-icon-item bg-opacity-10">
-                                                        {/* <img width="48" height="48" src="https://img.icons8.com/color/48/service.png" alt="service" /> */}
+                                                        <img width="48" height="48" src="https://img.icons8.com/color/48/service.png" alt="service" />
                                                     </div>
                                                     <div className="inline-block">
-                                                        <p className="mb-1 text-sm font-semibold leading-menu">All Services</p>
-                                                        <p className="text-xs font-medium text-alternatives-gray">Browse 11,000+ UI components grouped by frameworks</p>
+                                                        <p className="mb-1 text-sm font-semibold leading-menu">Buy</p>
+                                                        <p className="text-xs font-medium text-alternatives-gray">Buy a products</p>
                                                     </div>
                                                 </a>
                                             </div>
                                             <div className="w-full p-1">
                                                 <a className="p-3 flex items-center hover:bg-brand-section-light rounded shuffle-click" href="/marketplace" data-category="" data-action="click-navigation" data-label="browse-libraries" previewlistener="true">
                                                     <div className="flex items-center justify-center w-10 h-10 mr-2 rounded bg-menu-icon-item bg-opacity-10">
-                                                        {/* <img width="48" height="48" src="https://img.icons8.com/color/48/idea-sharing.png" alt="idea-sharing" /> */}
+                                                        <img width="48" height="48" src="https://img.icons8.com/color/48/idea-sharing.png" alt="idea-sharing" />
                                                     </div>
                                                     <div className="inline-block">
-                                                        <p className="mb-1 text-sm font-semibold leading-menu">sell phone</p>
-                                                        <p className="text-xs font-medium text-alternatives-gray">Browse 50+ UI libraries available in the Shuffle Editor</p>
+                                                        <p className="mb-1 text-sm font-semibold leading-menu">Sell</p>
+                                                        <p className="text-xs font-medium text-alternatives-gray">Sell the products</p>
                                                     </div>
                                                 </a>
                                             </div>
                                             <div className="w-full p-1">
                                                 <a className="p-3 flex items-center hover:bg-brand-section-light rounded shuffle-click" href="/templates" data-category="" data-action="click-navigation" data-label="browse-libraries" previewlistener="true">
                                                     <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 mr-2 rounded bg-menu-icon-item bg-opacity-10">
-                                                        {/* <img width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1" /> */}
+                                                        <img width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1" />
                                                     </div>
                                                     <div className="inline-block">
-                                                        <p className="mb-1 text-sm font-semibold leading-menu">laptop</p>
-                                                        <p className="text-xs font-medium text-alternatives-gray">Ready-to-use, fully-coded templates for the Shuffle Editor</p>
+                                                        <p className="mb-1 text-sm font-semibold leading-menu">Repair</p>
+                                                        <p className="text-xs font-medium text-alternatives-gray">Ready-to-use</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div className="w-full p-1">
+                                                <a className="p-3 flex items-center hover:bg-brand-section-light rounded shuffle-click" href="/Section/AllServices" data-category="" data-action="click-navigation" data-label="browse-libraries" previewlistener="true">
+                                                    <div className="flex items-center justify-center w-10 h-10 mr-2 rounded bg-menu-icon-item bg-opacity-10">
+                                                        <img width="48" height="48" src="https://img.icons8.com/color/48/service.png" alt="service" />
+                                                    </div>
+                                                    <div className="inline-block">
+                                                        <p className="mb-1 text-sm font-semibold leading-menu">Wholesale</p>
+                                                        <p className="text-xs font-medium text-alternatives-gray">Buy a products</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div className="w-full p-1">
+                                                <a className="p-3 flex items-center hover:bg-brand-section-light rounded shuffle-click" href="/Section/AllServices" data-category="" data-action="click-navigation" data-label="browse-libraries" previewlistener="true">
+                                                    <div className="flex items-center justify-center w-10 h-10 mr-2 rounded bg-menu-icon-item bg-opacity-10">
+                                                        <img width="48" height="48" src="https://img.icons8.com/color/48/service.png" alt="service" />
+                                                    </div>
+                                                    <div className="inline-block">
+                                                        <p className="mb-1 text-sm font-semibold leading-menu">Rental</p>
+                                                        <p className="text-xs font-medium text-alternatives-gray">Buy a products</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div className="w-full p-1">
+                                                <a className="p-3 flex items-center hover:bg-brand-section-light rounded shuffle-click" href="/Section/AllServices" data-category="" data-action="click-navigation" data-label="browse-libraries" previewlistener="true">
+                                                    <div className="flex items-center justify-center w-10 h-10 mr-2 rounded bg-menu-icon-item bg-opacity-10">
+                                                        <img width="48" height="48" src="https://img.icons8.com/color/48/service.png" alt="service" />
+                                                    </div>
+                                                    <div className="inline-block">
+                                                        <p className="mb-1 text-sm font-semibold leading-menu">more</p>
+                                                        <p className="text-xs font-medium text-alternatives-gray">Buy a products</p>
                                                     </div>
                                                 </a>
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="relative w-7/12 pt-4 pl-3 pb-6 bg-brand-section-light bg-opacity-60 border-l border-brand-section-dashboard">
                                         <div class="absolute top-0 h-full w-full bg-brand-section-light bg-opacity-60 -right-full"></div>
@@ -235,6 +276,159 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
+
+         
+
+
+            </div>
+
+            <div className='pt-24 '>
+
+            <hr className="border-gray-600 opacity-40" />
+            <div>
+              
+            </div>
+ 
+            <nav className="bg-white h-12 ">
+           
+      <div className="container h-11 flex justify-between items-center ">
+        {/* Logo or Brand */}
+        {/* <div className="text-black text-lg font-bold">
+          <Link href="/">Services</Link>
+        </div> */}
+
+        {/* Mobile Menu Button */}
+        {/* <button
+          className="text-red-600 md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button> */}
+
+        {/* Desktop Navigation Links */}
+        <ul className=" hidden md:grid grid-cols-7 gap-4 text-base font-bold w-full text-center justify-center items-center">
+        <li className="relative group">
+        <Link href="/Buypage" className="text-black relative pb-2 hover:text-gre">
+          Buy
+          <span className=" absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+
+        <ul className="absolute left-0 top-7 rounded-3xl  hidden group-hover:block bg-white border border-gray-200 shadow-lg w-40 z-10">
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre  rounded-t-3xl">
+    <Link href="/Buypage/Buyphone">Phone</Link>
+    </li>
+    <li className="px-4 py-2  hover:bg-gray-200 hover:text-gre">
+      <Link href="/Buypage/Buyphone">Laptop</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">DSLR</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">Tab</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">Television</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/monitor">Smartwatch</Link>
+    </li>
+  
+  </ul>
+</li>
+
+     
+      <li className="relative group">
+      <Link href="/Sell" className="text-black pb-2 relative hover:text-green-500">
+  Sell
+  <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+</Link>
+
+{/* <ul className="absolute left-0 top-7 rounded-3xl  hidden group-hover:block bg-white border border-gray-200 shadow-lg w-40 z-10">
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre  rounded-t-3xl">
+    <Link href="/">Phone</Link>
+    </li>
+    <li className="px-4 py-2  hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/laptop">Laptop</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">DSLR</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">Tab</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">Television</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/monitor">Smartwatch</Link>
+    </li>
+  
+  </ul> */}
+
+      </li>
+
+
+      <li className="relative group ">
+        <Link href="/Repair" className="text-black pb-2 relative hover:text-gre">
+          Repair
+          <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+      </li>
+      <li className="relative group">
+        <Link href="/rental " className="text-black pb-2 relative hover:text-gre">
+        Rental 
+          <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+      </li>
+      <li className="relative group">
+        <Link href="/wholesale" className="text-black pb-2 relative hover:text-gre">
+        Wholesale
+          <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+      </li> <li className="relative group">
+        <Link href="/more" className="text-black pb-2 relative hover:text-gre ">
+        Refurbished 
+          <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+      </li>
+      <li className="relative group">
+        <Link href="/more" className="text-black pb-2 relative hover:text-gre ">
+          More
+          <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+      </li>
+</ul>
+
+        {/* Mobile Navigation Links */}
+        {/* {isOpen && (
+          <ul className="md:hidden space-y-2 mt-4">
+            <li>
+              <Link href="/buy" className="block text-white hover:text-gray-300">Buy</Link>
+            </li>
+            <li>
+              <Link href="/sell" className="block text-white hover:text-gray-300">Sell</Link>
+            </li>
+            <li>
+              <Link href="/repair" className="block text-white hover:text-gray-300">Repair</Link>
+            </li>
+            <li>
+              <Link href="/wholesale" className="block text-white hover:text-gray-300">Wholesale</Link>
+            </li>
+            <li>
+              <Link href="/rental" className="block text-white hover:text-gray-300">Rental</Link>
+            </li>
+          </ul>
+        )}
+         */}
+
+
+
+
+
+      </div>
+    </nav>
+    <hr className="border-gray-600 opacity-40 " />
+    </div>
         </div>
     );
 }
