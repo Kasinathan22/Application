@@ -143,17 +143,18 @@ const Buyphone=()=> {
 
       
         <div className="w-72 lg:w-full p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map(product => (
-              <Link href={`/Buypage/${product.id}`}>
-            <div key={product.id} className="bg-white p-4 rounded-lg shadow-lg">
-              <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded-md mb-4" />
-              <h3 className="text-lg font-semibold">{product.name}</h3>
-              <p className="text-gray-500">{product.features.join(', ')}</p>
-              <p className="text-gray-600">Rating: {product.rating} stars</p>
-              <p className="mt-2 text-indigo-600 font-bold">${product.price}</p>
-            </div>
-            </Link>
-          ))}
+        {products.map(product => (
+  <Link key={product.id} href={`/Buypage/${product.id}`}>
+    <div className="bg-white p-4 rounded-lg shadow-lg" key={product.id}>
+      <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 className="text-lg font-semibold">{product.name}</h3>
+      <p className="text-gray-500">{product.features.join(', ')}</p>
+      <p className="text-gray-600">Rating: {product.rating} stars</p>
+      <p className="mt-2 text-indigo-600 font-bold">${product.price}</p>
+    </div>
+  </Link>
+))}
+
         </div>
      
       </div>
