@@ -376,7 +376,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Links */}
         {isOpen && (
-  <ul className="md:hidden absolute left-1/2 transform -translate-x-1/2 space-y-2 mt-48 bg-black p-4 rounded-md shadow-md w-40 max-w-md">
+  <ul className="z-50 md:hidden absolute left-1/2 transform -translate-x-1/2 space-y-2 mt-48 bg-black p-4 rounded-md shadow-md w-40 max-w-md">
     <li>
       <button 
         onClick={() => setIsOpen(false)} 
@@ -395,7 +395,7 @@ const Navbar = () => {
       <Link href="/Repair" className="block text-white hover:text-gray-700">Repair</Link>
     </li>
     <li>
-      <Link href="/wholesale" className="block text-white hover:text-gray-700">Wholesale</Link>
+      <Link href="/Wholesale" className="block text-white hover:text-gray-700">Wholesale</Link>
     </li>
     <li>
       <Link href="/rental" className="block text-white hover:text-gray-700">Rental</Link>
