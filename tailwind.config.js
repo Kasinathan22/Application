@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         gre:'#42C8B7',
+        ye:'#F8A440',
+        r:'#D71921',
+        fo:'#EBFFFC'
         
       },
     },

@@ -1,55 +1,57 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect } from 'react';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-function Client() { // Changed 'client' to 'Client'
-    const [isHovered, setIsHovered] = useState(false);
+function Client() {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+ // Changed 'client' to 'Client'
     return (
-        <div className="grid grid-cols-1 bg-white md:grid-cols-3 gap-8 items-center px-4 md:px-8 lg:px-16 py-8 md:py-16 text-black">
-            <div>
-                <div className="mb-4">
-                    <h3 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="text-xs md:text-sm lg:text-base uppercase tracking-widest text-gray-700">About Company</h3>
-                </div>
-                <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="text-4xl lg:text-5xl md:text-2xl font-bold leading-tight mb-4">
-                    We are a
-                    <span className='text-orange-600'> top Digital agency</span>
-                    <br />
-                    in the world.
-                </h1>
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                    <button
-                        className={`relative px-3 py-2 text-sm bg-yellow-400 text-black border-2 rounded-full font-roboto font-light overflow-hidden transition-transform duration-200 ease-in-out transform ${
-                            isHovered ? 'scale-105 border-transparent text-black' : 'border-black'
-                        }`}
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
-                        style={{ zIndex: 0 }}
-                    >
-                        <span
-                            className={`absolute inset-0 bg-slate-50 rounded-full transition-transform duration-200 ease-out transform ${
-                                isHovered ? 'translate-y-0' : 'translate-y-full'
-                            }`}
-                            style={{ transformOrigin: 'bottom', zIndex: -1 }}
-                        ></span>
-                        Get in Touch
-                    </button>
-                </div>
+        <div className="bg-white  pt-8  px-4 pb-8 sm:pt-16 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto ">
+          <h2 className="text-lg sm:text-4xl text-center md:4xl lg:4xl font-semibold leading-6 text-gray-900 uppercase mb-8 sm:mb-28"></h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="relative space-y-4 sm:space-y-6 px-4 sm:px-6">
+              <p className="text-gray-600 text-sm sm:text-base w-full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera. Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera...
+                Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera.  Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera...
+  
+              </p>
+              <div className="relative w-full h-80 md:h-96 group">
+                <Image src="/image/ss.svg" alt="Project 1" layout="fill" objectFit="cover" className="rounded-lg transition-opacity duration-300 ease-in-out group-hover:opacity-60 " />
+                {/* <div className="absolute inset-0 flex items-center top-52 ml-10 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                  <div className="bg-black bg-opacity-90 p-4 rounded-lg font-semibold text-white">
+                    Project 1 Description
+                  </div>
+                </div> */}
+              </div>
             </div>
-
-            <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" className="lg:pl-8 md:pl-16">
-                <Image src="" alt="Office image" className="w-full h-auto rounded-lg md:w-96 lg:w-full" />
-                <div className="mt-8">
-                    <p className="text-gray-600 w-full md:w-72 lg:w-72">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit viverra purus senectus sapien habitant rutrum himenaeos curabitur posuere congue ac non eu odio tempor placerat id.
-                    </p>
-                </div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="mt-10 md:mt-16 lg:pl-8 xl:pl-28 md:pl-16 sm:justify-center xl:w-full">
-                <Image src="" alt="Office image" className="w-full h-auto mg:h-96 mg:w-64 lg:h-80 lg:w-64 rounded-lg" />
-            </div>
+            <div className="relative space-y-4 sm:space-y-6 flex flex-col items-center">
+              <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="relative w-full h-80 md:h-96 group">
+                <Image src="/image/ss.svg" alt="Project 2" layout="fill" objectFit="cover" className="rounded-lg transition-opacity duration-300 ease-in-out group-hover:opacity-60" />
+                {/* <div className="absolute inset-0 flex items-center top-52 ml-10 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                  <div className="bg-black bg-opacity-90 p-4 rounded-lg font-semibold text-white">
+                    Project 2 Description
+                  </div>
+                </div> */}
+              </div>
+              <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-gray-600 text-sm sm:text-base w-full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera. Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera...
+                Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera.  Lorem ipsum dolor sit amet consectetur adipisicing elit eros nullam inceptos placera...
+  
+              </p>
+             </div>
+          </div>
+  
+  
         </div>
+      </div>
     );
 }
 

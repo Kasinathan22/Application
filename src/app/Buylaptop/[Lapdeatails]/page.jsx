@@ -1,10 +1,10 @@
-import Blap from '@/components/Buypage/BLaptop/Blap'
+import Lapdetails from '@/components/Buylaptop/Buylaptop/LapDes/Lapdetails'
 import React from 'react'
 
 function page() {
   return (
     <div>
-        <Blap />
+        <Lapdetails />
     </div>
   )
 }

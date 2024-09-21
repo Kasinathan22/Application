@@ -298,15 +298,15 @@ const Navbar = () => {
         </div> */}
 
         {/* Mobile Menu Button */}
-        {/* <button
-          className="text-red-600 md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
-        </button> */}
+        <button
+    className="text-black md:hidden ml-80 "
+    onClick={() => setIsOpen(!isOpen)}
+  >
+    ☰
+  </button>
 
         {/* Desktop Navigation Links */}
-        <ul className=" hidden md:grid grid-cols-7 gap-4 text-base font-bold w-full text-center justify-center items-center">
+        <ul className="hidden  md:grid grid-cols-6 gap-2 md:lg:gap-4 text-xs md:lg:text-lg font-bold w-full text-center justify-center items-center">
         <li className="relative group">
         <Link href="/Buypage" className="text-black relative pb-2 hover:text-gre">
           Buy
@@ -318,10 +318,10 @@ const Navbar = () => {
     <Link href="/Buypage/Buyphone">Phone</Link>
     </li>
     <li className="px-4 py-2  hover:bg-gray-200 hover:text-gre">
-      <Link href="/Buypage/Buyphone">Laptop</Link>
+      <Link href="/Buylaptop/Buylaptop">Laptop</Link>
     </li>
     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-      <Link href="/buy/dslr">DSLR</Link>
+      <Link href="/Buydslr/Buydslr">DSLR</Link>
     </li>
     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
       <Link href="/buy/dslr">Tab</Link>
@@ -343,27 +343,6 @@ const Navbar = () => {
   <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
 </Link>
 
-{/* <ul className="absolute left-0 top-7 rounded-3xl  hidden group-hover:block bg-white border border-gray-200 shadow-lg w-40 z-10">
-    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre  rounded-t-3xl">
-    <Link href="/">Phone</Link>
-    </li>
-    <li className="px-4 py-2  hover:bg-gray-200 hover:text-gre">
-      <Link href="/buy/laptop">Laptop</Link>
-    </li>
-    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-      <Link href="/buy/dslr">DSLR</Link>
-    </li>
-    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-      <Link href="/buy/dslr">Tab</Link>
-    </li>
-    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-      <Link href="/buy/dslr">Television</Link>
-    </li>
-    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-      <Link href="/buy/monitor">Smartwatch</Link>
-    </li>
-  
-  </ul> */}
 
       </li>
 
@@ -375,22 +354,18 @@ const Navbar = () => {
         </Link>
       </li>
       <li className="relative group">
-        <Link href="/rental " className="text-black pb-2 relative hover:text-gre">
+        <Link href="/Rent/Renthero" className="text-black pb-2 relative hover:text-gre">
         Rental 
           <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
         </Link>
       </li>
       <li className="relative group">
-        <Link href="/wholesale" className="text-black pb-2 relative hover:text-gre">
+        <Link href="/Wholesale" className="text-black pb-2 relative hover:text-gre">
         Wholesale
           <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
         </Link>
-      </li> <li className="relative group">
-        <Link href="/more" className="text-black pb-2 relative hover:text-gre ">
-        Refurbished 
-          <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
-        </Link>
-      </li>
+      </li> 
+     
       <li className="relative group">
         <Link href="/more" className="text-black pb-2 relative hover:text-gre ">
           More
@@ -400,26 +375,37 @@ const Navbar = () => {
 </ul>
 
         {/* Mobile Navigation Links */}
-        {/* {isOpen && (
-          <ul className="md:hidden space-y-2 mt-4">
-            <li>
-              <Link href="/buy" className="block text-white hover:text-gray-300">Buy</Link>
-            </li>
-            <li>
-              <Link href="/sell" className="block text-white hover:text-gray-300">Sell</Link>
-            </li>
-            <li>
-              <Link href="/repair" className="block text-white hover:text-gray-300">Repair</Link>
-            </li>
-            <li>
-              <Link href="/wholesale" className="block text-white hover:text-gray-300">Wholesale</Link>
-            </li>
-            <li>
-              <Link href="/rental" className="block text-white hover:text-gray-300">Rental</Link>
-            </li>
-          </ul>
-        )}
-         */}
+        {isOpen && (
+  <ul className="md:hidden absolute left-1/2 transform -translate-x-1/2 space-y-2 mt-48 bg-black p-4 rounded-md shadow-md w-40 max-w-md">
+    <li>
+      <button 
+        onClick={() => setIsOpen(false)} 
+        className="block text-r hover:text-gray-700 mb-2"
+      >
+        Close
+      </button>
+    </li>
+    <li>
+      <Link href="/Buypage" className="block text-white hover:text-gray-700">Buy</Link>
+    </li>
+    <li>
+      <Link href="/Sell" className="block text-white hover:text-gray-700">Sell</Link>
+    </li>
+    <li>
+      <Link href="/Repair" className="block text-white hover:text-gray-700">Repair</Link>
+    </li>
+    <li>
+      <Link href="/wholesale" className="block text-white hover:text-gray-700">Wholesale</Link>
+    </li>
+    <li>
+      <Link href="/rental" className="block text-white hover:text-gray-700">Rental</Link>
+    </li>
+  </ul>
+)}
+
+
+
+
 
 
 

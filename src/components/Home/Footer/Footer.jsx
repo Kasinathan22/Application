@@ -6,14 +6,12 @@ import Footermainbg from '../../../../public/image/Background/footerbgshape.png'
 
 const Footer = () => {
   return (
-    <div className='w-full mt-20 pt-16 relative'>
+    <div className='w-full  pt-5 relative'>
 
-      <section className="relative text-white justify-center w-full bg-black">
-      </section>
-
+    
 
       <footer
-        className="bg-black  text-gray-100 py-12 mt-[-100px] md:mt-[-50px] lg:mt-[-50px] relative"
+        className="bg-fo  text-black py-12 mt-[-100px] md:mt-[-50px] lg:mt-[-50px] relative"
         style={{
           // Use the Footermainbg image as a background
           backgroundSize: 'contain', // Adjust size to fit within the container
@@ -28,18 +26,18 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-8 md:mb-0 md:flex-1">
               <h2 className=" text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold mb-4 py-12 md:py-10 px-5">Lets make something<br /><span className='text-orange-600   '> great together</span></h2>
-<h2 className='text-white'>
+<h2 className='text-black '>
 Bangalore, Karnataka 
 
 </h2>
-<p className='text-white pt-5'>
+<p className='text-black  pt-5'>
 Phone: +91 88888888 <br />
 Email: sell@bazaar.in</p>
             </div>
             <div className="flex flex-col md:flex-row ml-40 ">
               <div className="mb-8 md:mb-0 md:flex-1 ">
                 <h2 className="text-xl font-bold mb-4">Services</h2>
-                <ul className="text-gray-300">
+                <ul className="text-black ">
                   <li className="mb-2"><Link href="/Section/Digitalmarket">Sell Phone</Link></li>
                   <li className="mb-2"><Link href="/Section/ECommerce">Sell Television</Link></li>
                   <li className="mb-2"><Link href="/Section/Seo">Sell Smart Watch
@@ -50,7 +48,7 @@ Email: sell@bazaar.in</p>
 
               <div className="mb-8 md:mb-0 md:flex-1">
                 <h2 className="text-xl font-bold mb-4">Company</h2>
-                <ul className="text-gray-300">
+                <ul className="text-black ">
                   <li className="mb-2"><Link href="/">About Us</Link></li>
                   <li className="mb-2"><Link href="/About">Careers</Link></li>
                   <li className="mb-2"><Link href="">Services</Link></li>

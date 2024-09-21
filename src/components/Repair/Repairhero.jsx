@@ -12,7 +12,7 @@ function Repairhero() {
          src={bg.src}
 
        />
-     <div className="hidden md:block lg:block absolute top-3 right-0 m-4 p-4 w-52 bg-slate-300 rounded-lg shadow-lg">
+     {/* <div className="hidden md:block lg:block absolute top-3 right-0 m-4 p-4 w-52 bg-slate-300 rounded-lg shadow-lg">
  
  <h2 className="text-lg font-semibold mb-2">Query Form</h2>
         <form>
@@ -40,7 +40,7 @@ function Repairhero() {
           <button type="submit" className="bg-blue-500 text-white  rounded px-4 py-2">Submit</button>
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
     </div>
   );
