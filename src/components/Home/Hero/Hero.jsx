@@ -65,7 +65,7 @@ const Hero = () => {
   return (
     <div className='h-full w-full'>
       {/* Carousel */}
-      <div className='pt-16 md:lg:pt-14 pb-20 md:lg:pb-20' style={containerStyle}>
+      <div className='pt-10 md:lg:pt-14 pb-8 md:lg:pb-20' style={containerStyle}>
         <div style={contentStyle}>
           {images.map((image, index) => (
             <div key={index} className='relative h-32 md:lg:h-full w-full flex-shrink-0'>

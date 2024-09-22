@@ -91,12 +91,13 @@ const Sales = () => {
 
 
 
-    <div className="container mx-auto py-20 px-5">
+    <div className="container mx-auto py-10 md:lg:py-20 px-5">
       {/* Main Heading */}
       {/* <h1 className="text-4xl text-center font-bold mb-8">Our Components</h1> */}
 
       {/* Grid layout for image boxes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center ">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4  w-auto gap-6 justify-center items-center mx-auto">
+
         {/* Render each image component */}
         {components.map((component, index) => (
           <div key={index} className="relative  overflow-hidden rounded-xl hover:scale-105 transition-transform duration-300">
@@ -112,8 +113,8 @@ const Sales = () => {
 
             {/* Overlay text (title and description) */}
             <div className="absolute inset-0  flex flex-col justify-start items-start text-black  p-4 hover:scale-105">
-              <h1 className="text-2xl font-bold">{component.title}</h1>
-              <p className="text-sm mt-1 font-light text-gray-700 w-52">{component.description}</p>
+              <h1 className="text-2xl font-bold hidden md:block lg:block">{component.title}</h1>
+              <p className="text-xs md:lg:text-sm  mt-1 font-light text-gray-700 w-32  md:lg:w-52">{component.description}</p>
               <p className="text-xs pt-4 text-black font-extrabold">BuyNow</p>
             </div>
           </div>
