@@ -1,104 +1,69 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { motion, useAnimation, useMotionValue } from "framer-motion";
-import useMeasure from "react-use-measure";
+"use client"
+import { useState } from 'react';
+import msg from '../../../../public/image/Home/Hhero/msg.png';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const testimonials = [
-  { id: 1, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'John Doe' },
-  { id: 2, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'Jane Smith' },
-  { id: 3, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'Emily Johnson' },
-  { id: 4, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'Michael Brown' },
-  { id: 5, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'Sarah Davis' },
-  { id: 6, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'David Wilson' },
-  { id: 7, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'Laura Miller' },
-  { id: 8, imageSrc: 'https://randomuser.me/api/portraits/men/50.jpg', text: 'Well trained staff. Overall a positive experience in selling my phone at Cashify.', handle: 'TATA Group', author: 'James Taylor' },
+  { id: 1, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nostrum asperiores sunt nobis architecto aut, soluta distinctio cumque, pariatur eum temporibus optio itaque atque repellat facere, eos commodi perferendis",Name:"Jack" },
+  { id: 2, text: "two Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nostrum asperiores sunt nobis architecto aut, soluta distinctio cumque, pariatur eum temporibus optio itaque atque repellat facere, eos commodi perferendis",Name:"Rose" },
+  { id: 3, text: "three Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nostrum asperiores sunt nobis architecto aut, soluta distinctio cumque, pariatur eum temporibus optio itaque atque repellat facere, eos commodi perferendis",Name:"jack" },
+  { id: 4, text: "four Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nostrum asperiores sunt nobis architecto aut, soluta distinctio cumque, pariatur eum temporibus optio itaque atque repellat facere, eos commodi perferendis",Name:"Rose" },
+  { id: 5, text: "five Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nostrum asperiores sunt nobis architecto aut, soluta distinctio cumque, pariatur eum temporibus optio itaque atque repellat facere, eos commodi perferendis",Name:"jack" },
 ];
 
-const Testimonial = () => {
-  const [ref, { width }] = useMeasure();
-  const xTranslation = useMotionValue(0);
-  const controls = useAnimation();
-  const isAnimating = useRef(true);
+export default function Testimonial() {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  useEffect(() => {
-    const finalPosition = -width / 2 - 8;
-    
-    controls.start({
-      x: [0, finalPosition],
-      transition: {
-        ease: "linear",
-        duration: 25,
-        repeat: Infinity,
-        repeatType: "loop",
-        repeatDelay: 0,
-      },
-    });
-
-    return () => controls.stop();
-  }, [controls, width]);
-
-  const handleMouseEnter = () => {
-    isAnimating.current = false;
-    controls.stop();
+  const handleNext = () => {
+    setCurrentTestimonial((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
-  const handleMouseLeave = () => {
-    isAnimating.current = true;
-    const finalPosition = -width / 2 - 8;
-
-    controls.start({
-      x: [xTranslation.get(), finalPosition],
-      transition: {
-        ease: "linear",
-        duration: 20,
-        repeat: Infinity,
-        repeatType: "loop",
-        repeatDelay: 0,
-      },
-    });
+  const handlePrevious = () => {
+    setCurrentTestimonial(
+      (prevIndex) =>
+        (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
-    <div className="px-4 py-8 mx-auto max-w-7xl overflow-hidden bg-black">
-      <div className="text-white text-center">
-        <h3 className="py-6 text-3xl text-center font-bold">Testimonials</h3>
-        <p className='text-center text-base md:lg:text-2xl font-bold'>
-          We are thankful to each and every company sponsored our plugin <br /> which helped us to continue working on it.
+    <div className="flex items-center justify-center h-screen bg-gray-50 px-5 md:lg:px-20">
+      <div className="w-full h-4/6 md:lg:h-96 p-6 bg-g rounded-3xl shadow-lg text-center relative group">
+        {/* Center the image using flexbox */}
+        <div className="flex justify-center items-center mb-4">
+          <img 
+            src={msg.src}
+            alt="Testimonial Image"
+            className="object-contain h-14 w-auto"
+          />
+        </div>
+
+        {/* Center the p tag content horizontally */}
+        <p className="text-xl md:lg:text-2xl font-medium pt-14 md:lg:pt-10 w-72 md:lg:w-9/12 mx-auto">
+          {testimonials[currentTestimonial].text}
         </p>
-      </div>
-      <div className="relative py-10">
-        <motion.div
-          className="flex gap-4"
-          style={{ x: xTranslation }}
-          ref={ref}
-          animate={controls}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div className="flex gap-4">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="flex flex-col break-inside-avoid-page z-0 relative rounded-2xl h-56 bg-white">
-                <div className="p-4 flex justify-between">
-                  <div className="flex space-x-6">
-                    <div className="flex space-x-4 flex-shrink-0 w-52 pt-5">
-                      <img src={testimonial.imageSrc} className="w-10 h-10 rounded-full" alt="profile" />
-                      <div>
-                        <div className="font-bold">{testimonial.author}</div>
-                        <div className="text-md font-semibold text-orange-500">{testimonial.handle}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a href='#' target="_blank" className="px-4 pt-8 whitespace-pre-line break-inside-avoid-page">
-                  <span>{testimonial.text}</span>
-                </a>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        <h1 className='text-xl text-black mt-5 font-extrabold' > {testimonials[currentTestimonial].Name}</h1>
+
+        {/* Buttons container */}
+        <div className="-mt-80 md:lg:-mt-32 flex justify-between">
+          <button
+            onClick={handlePrevious}
+            className="bg-gray-500 text-white py-2 px-2 md:lg:px-4 rounded hover:bg-gray-600 transition opacity-0 group-hover:opacity-100"
+          >
+            <ArrowBackIcon />
+          </button>
+
+          <button
+            onClick={handleNext}
+            className="bg-blue-500 text-white py-2 px-2 md:lg:px-4 rounded hover:bg-blue-600 transition opacity-0 group-hover:opacity-100"
+          >
+            <ArrowForwardIcon />
+          </button>
+        </div>
+
+        {/* Arrow icons for hover effect */}
+  
       </div>
     </div>
   );
-};
-
-export default Testimonial;
+}

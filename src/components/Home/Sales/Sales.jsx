@@ -1,6 +1,12 @@
 "use client"
+import React from "react";
 import Image from 'next/image'
 import pp from '../../../../public/image/ppost.svg'
+
+
+
+
+
 
 const containerData = [
     {
@@ -45,12 +51,35 @@ const containerData = [
         discount:"10%"
       }
   ];
+
+  const components = [
+    {
+      imageSrc: "/image/Home/four/b.jpg", // Update with your image path
+      title: "Component 1",
+      description: "Buy a product and sell a product",
+    },
+    {
+      imageSrc: "/image/Home/four/r.jpg", // Update with your image path
+      title: "Component 2",
+      description: "Repair and Service",
+    },
+    {
+      imageSrc: "/image/Home/four/w.jpg", // Update with your image path
+      title: "Component 3",
+      description: "Wholesale Dealer",
+    },
+    {
+      imageSrc: "/image/Home/four/h.jpg", // Update with your image path
+      title: "Component 4",
+      description: "Rental and sell your product",
+    },
+  ];
   
 
 const Sales = () => {
   return (
-    <div className='w-auto h-full'>
-    <div className='w-full'>
+    <div className='w-auto h-full bg-white'>
+    {/* <div className='w-full'>
       <Image 
         src={pp} 
         alt="phone post" 
@@ -58,9 +87,43 @@ const Sales = () => {
         width={100}  // Ratio width and height
         height={100} // Define a ratio
       />
-    </div>
+    </div> */}
 
-    <div className='py-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-2'>
+
+
+    <div className="container mx-auto py-20 px-5">
+      {/* Main Heading */}
+      {/* <h1 className="text-4xl text-center font-bold mb-8">Our Components</h1> */}
+
+      {/* Grid layout for image boxes */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center ">
+        {/* Render each image component */}
+        {components.map((component, index) => (
+          <div key={index} className="relative  overflow-hidden rounded-xl hover:scale-105 transition-transform duration-300">
+
+            {/* Image */}
+            <Image
+              src={component.imageSrc}
+              alt={`Component ${index + 1}`}
+              width={400} // Adjust width as needed
+              height={400} // Adjust height as needed
+              className="object-cover rounded-xl w-full h-full"
+            />
+
+            {/* Overlay text (title and description) */}
+            <div className="absolute inset-0  flex flex-col justify-start items-start text-black  p-4 hover:scale-105">
+              <h1 className="text-2xl font-bold">{component.title}</h1>
+              <p className="text-sm mt-1 font-light text-gray-700 w-52">{component.description}</p>
+              <p className="text-xs pt-4 text-black font-extrabold">BuyNow</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+ 
+
+
+    {/* <div className='py-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-2'>
         {containerData.map((container) => (
         <div key={container.id} className="bg-white shadow-md rounded-lg p-4 flex flex-col ">
         <div className="flex justify-center items-center "> 
@@ -101,7 +164,7 @@ const Sales = () => {
     <div className='rounded-2xl text-center border-2 border-yellow-400 bg-yellow-400 h-7 w-24'><button className='text-sm'>Add to cart</button></div>
     </div>
         ))}
-      </div>
+      </div> */}
   </div>
   )
 }

@@ -13,7 +13,8 @@ module.exports = {
         gre:'#42C8B7',
         ye:'#F8A440',
         r:'#D71921',
-        fo:'#EBFFFC'
+        fo:'#EBFFFC',
+        g:'#EBEBEB',
         
       },
     },
