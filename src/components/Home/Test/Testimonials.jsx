@@ -28,7 +28,7 @@ export default function Testimonial() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-50 px-5 md:lg:px-20">
-      <div className="w-full h-4/6 md:lg:h-96 p-6 bg-g rounded-3xl shadow-lg text-center relative group">
+      <div className="w-full h-5/6 md:lg:h-96 p-6 bg-g rounded-3xl shadow-lg text-center relative group">
         {/* Center the image using flexbox */}
         <div className="flex justify-center items-center mb-4">
           <img 

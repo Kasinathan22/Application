@@ -333,6 +333,28 @@ const Navbar = () => {
          Buy
          <span className=" absolute left-0 bottom-0 w-full h-[2px] bg-r transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
        </Link>
+
+       <ul className="absolute left-0 top-7 rounded-3xl  hidden group-hover:block bg-white border border-gray-200 shadow-lg w-40 z-10">
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre  rounded-t-3xl">
+     <Link href="/Buypage/Buyphone">Phone</Link>
+     </li>
+    <li className="px-4 py-2  hover:bg-gray-200 hover:text-gre">
+       <Link href="/Buylaptop/Buylaptop">Laptop</Link>
+     </li>
+     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+       <Link href="/Buydslr/Buydslr">DSLR</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">Tab</Link>
+    </li>
+     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+       <Link href="/buy/dslr">Television</Link>
+     </li>
+     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+       <Link href="/buy/monitor">Smartwatch</Link>
+     </li>
+  
+   </ul>
        </div>
        <div className="relative group">
        <Link href="/Buypage" className="text-black relative pb-2 hover:text-r">
