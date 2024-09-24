@@ -101,6 +101,7 @@
 //     ];
 "use client";
 import React, { useState } from 'react';
+import logo from '../../../../public/image/logo/logo.png'
 import { FiUser, FiHeart, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi'; // Icons for profile, wishlist, cart, menu
 import Link from 'next/link';
 const Navbar = () => {
@@ -316,46 +317,50 @@ const Navbar = () => {
 
 
 
-<nav className="bg-white  h-[50px]">
-<div className="max-w-7xl mx-auto pt-3 px-4 sm:px-6 lg:px-10">
+<nav className="bg-white  h-[30px]">
+<div className="max-w-7xl mx-auto pt-1 px-4 sm:px-6 lg:px-10">
   <div className="flex justify-between items-center h-16">
     {/* Left Side - Logo */}
-    <div className="flex-shrink-0">
-      <a href="/" className="text-black pl-10 text-3xl font-black">Bazaar</a>
+    <div className="flex  flex-shrink-0 pl-10">
+      <img
+      src={logo.src} className='w-12' />
+      <a href="/" className="text-black pl-2 text-3xl font-black pt-1">ApplicationBazaar</a>
     </div>
 
     {/* Center - Navigation Links for Desktop */}
     <div className="hidden md:flex space-x-6 font-bold text-base">
 
 
-<div className="relative group">
-       <Link href="/Buypage" className="text-black relative pb-2 hover:text-r">
-         Buy
-         <span className=" absolute left-0 bottom-0 w-full h-[2px] bg-r transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
-       </Link>
+    <div className="relative group">
+  <Link href="/Buypage" className="text-black relative pb-2 hover:text-r">
+    Buy
+    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-r transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+  </Link>
 
-       <ul className="absolute left-0 top-7 rounded-3xl  hidden group-hover:block bg-white border border-gray-200 shadow-lg w-40 z-10">
-    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre  rounded-t-3xl">
-     <Link href="/Buypage/Buyphone">Phone</Link>
-     </li>
-    <li className="px-4 py-2  hover:bg-gray-200 hover:text-gre">
-       <Link href="/Buylaptop/Buylaptop">Laptop</Link>
-     </li>
-     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-       <Link href="/Buydslr/Buydslr">DSLR</Link>
+  {/* Dropdown */}
+  <ul className="absolute left-0 top-full mt-0 rounded-3xl hidden group-hover:block bg-white border border-gray-200 shadow-lg w-40 z-20">
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre rounded-t-3xl">
+      <Link href="/Buypage/Buyphone">Phone</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/Buylaptop/Buylaptop">Laptop</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/Buydslr/Buydslr">DSLR</Link>
     </li>
     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
       <Link href="/buy/dslr">Tab</Link>
     </li>
-     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-       <Link href="/buy/dslr">Television</Link>
-     </li>
-     <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
-       <Link href="/buy/monitor">Smartwatch</Link>
-     </li>
-  
-   </ul>
-       </div>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre">
+      <Link href="/buy/dslr">Television</Link>
+    </li>
+    <li className="px-4 py-2 hover:bg-gray-200 hover:text-gre rounded-b-3xl">
+      <Link href="/buy/monitor">Smartwatch</Link>
+    </li>
+  </ul>
+</div>
+
+
        <div className="relative group">
        <Link href="/Buypage" className="text-black relative pb-2 hover:text-r">
          Sell

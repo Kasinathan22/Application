@@ -2,7 +2,7 @@
 import Navbar from "@/components/Home/Navbar/Navbar";
 import "./globals.css";
 import Footer from "@/components/Home/Footer/Footer";
-import Nav from "@/components/Home/Navbar/Nav";
+
 
 // const geistSans = localFont({
 //   src: "./public/fonts/GeistVF.woff", // Use the absolute path from the public folder
@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <Navbar /> */}
-        <Navbar />
-    
+       
+   
         {children}
         <Footer />
       </body>

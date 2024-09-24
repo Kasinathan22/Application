@@ -78,7 +78,7 @@ const containerData = [
 
 const Sales = () => {
   return (
-    <div className='w-auto h-full bg-white'>
+    <div className='w-auto h-full '>
     {/* <div className='w-full'>
       <Image 
         src={pp} 
@@ -91,7 +91,7 @@ const Sales = () => {
 
 
 
-    <div className="container mx-auto py-10 md:lg:py-20 px-5">
+    <div className="container mx-auto  py-10 md:lg:py-20 px-5">
       {/* Main Heading */}
       {/* <h1 className="text-4xl text-center font-bold mb-8">Our Components</h1> */}
 

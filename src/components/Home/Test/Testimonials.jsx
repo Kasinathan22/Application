@@ -27,7 +27,7 @@ export default function Testimonial() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-50 px-5 md:lg:px-20">
+    <div className="flex items-center justify-center h-screen px-5 md:lg:px-20">
       <div className="w-full h-5/6 md:lg:h-96 p-6 bg-g rounded-3xl shadow-lg text-center relative group">
         {/* Center the image using flexbox */}
         <div className="flex justify-center items-center mb-4">
@@ -42,20 +42,20 @@ export default function Testimonial() {
         <p className="text-xl md:lg:text-2xl font-medium pt-14 md:lg:pt-10 w-72 md:lg:w-9/12 mx-auto">
           {testimonials[currentTestimonial].text}
         </p>
-        <h1 className='text-xl text-black mt-5 font-extrabold' > {testimonials[currentTestimonial].Name}</h1>
+        <h1 className='text-xl text-black  mt-5 font-extrabold' > {testimonials[currentTestimonial].Name}</h1>
 
         {/* Buttons container */}
         <div className="-mt-80 md:lg:-mt-32 flex justify-between">
           <button
             onClick={handlePrevious}
-            className="bg-gray-500 text-white py-2 px-2 md:lg:px-4 rounded hover:bg-gray-600 transition opacity-0 group-hover:opacity-100"
+            className="bg-gray-500 text-black py-2 px-2 md:lg:px-4 rounded hover:bg-gray-600 transition opacity-0 group-hover:opacity-100"
           >
             <ArrowBackIcon />
           </button>
 
           <button
             onClick={handleNext}
-            className="bg-blue-500 text-white py-2 px-2 md:lg:px-4 rounded hover:bg-blue-600 transition opacity-0 group-hover:opacity-100"
+            className="bg-blue-500 text-black py-2 px-2 md:lg:px-4 rounded hover:bg-blue-600 transition opacity-0 group-hover:opacity-100"
           >
             <ArrowForwardIcon />
           </button>

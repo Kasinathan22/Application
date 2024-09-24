@@ -15,6 +15,15 @@ module.exports = {
         r:'#D71921',
         fo:'#EBFFFC',
         g:'#EBEBEB',
+        gy:'#6B6B6B',
+
+
+        lg:'#F0F0F0',
+        cg:'#333333',
+        bp:'#EADBD4',
+        nh:"#A0846C",
+
+
         
       },
     },
