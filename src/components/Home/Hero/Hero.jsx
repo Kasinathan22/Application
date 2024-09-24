@@ -115,7 +115,8 @@ const Hero = ({ onNextTheme, onPreviousTheme }) => {
               
                className='barlow-light text-4xl absolute top-10 left-1/2 transform -translate-x-1/2'>
             
-            Discover a place you'll love to live
+            Discover a place you&apos;ll love to live
+
             </div>
           </div>
 
