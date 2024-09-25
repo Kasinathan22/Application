@@ -61,27 +61,30 @@ import { useState } from 'react';
     // </nav>
     const Nav = ({ textColor }) => {
       return (
-        <nav className="bg-transparent py-4">
-          <div className="container mx-auto flex justify-center">
-            <ul className="flex space-x-8">
-              <li>
-                <a href="#buy" className={`${textColor} hover:text-nh`}>Buy</a>
-              </li>
-              <li>
-                <a href="#sell" className={`${textColor} hover:text-nh`}>Sell</a>
-              </li>
-              <li>
-                <a href="#repair" className={`${textColor} hover:text-nh`}>Repair</a>
-              </li>
-              <li>
-                <a href="#wholesale" className={`${textColor} hover:text-nh`}>Wholesale</a>
-              </li>
-              <li>
-                <a href="#rental" className={`${textColor} hover:text-nh`}>Rental</a>
-              </li>
-            </ul>
-          </div>
+        <div className="flex justify-center items-center pt-5 ">
+        <nav className="bg-[hsla(0,0%,93%,0.72)] w-[400px] sticky top-5 z-10 flex justify-center items-center backdrop-blur-xl rounded-full p-4">
+          <ul className="flex space-x-8">
+            <li>
+              <a href="#buy" className={`${textColor} hover:text-nh`}>Buy</a>
+            </li>
+            <li>
+              <a href="#sell" className={`${textColor} hover:text-nh`}>Sell</a>
+            </li>
+            <li>
+              <a href="#repair" className={`${textColor} hover:text-nh`}>Repair</a>
+            </li>
+            <li>
+              <a href="#wholesale" className={`${textColor} hover:text-nh`}>Wholesale</a>
+            </li>
+            <li>
+              <a href="#rental" className={`${textColor} hover:text-nh`}>Rental</a>
+            </li>
+          </ul>
         </nav>
+      </div>
+     
+      
+        
       );
     };
     

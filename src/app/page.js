@@ -7,6 +7,7 @@ import Services from "@/components/Home/Services/Services";
 import Sales from "@/components/Home/Sales/Sales";
 import Rshome from "@/components/Home/Rshome/Rshome";
 import Nav from "@/components/Home/Navbar/Nav";
+import Into from "@/components/Home/Into/Into";
 
 const themes = [
   {
@@ -62,8 +63,11 @@ export default function Home() {
 
      {activeIndex === 0 && (
        <>
+    
          <Sales />
+         <Into />
          <Infitescroll />
+
        </>
      )}
 
