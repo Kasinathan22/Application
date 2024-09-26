@@ -295,7 +295,7 @@ const Hero = ({ onNextTheme, onPreviousTheme }) => {
 
 {/* Carousel */}
 
-<div className='pt-10 md:lg:pt-14 md:lg:pb-20 bg-transparent' style={{ display: 'flex', overflow: 'hidden', width: '95%', position: 'relative', height: 'auto', margin: '0 auto', justifyContent: 'center' }}>
+<div className='pt-10 md:lg:pt-14 md:lg:pb-20 bg-transparent overflow-hidden' style={{ display: 'flex', overflow: 'hidden', width: '95%', position: 'relative', height: 'auto', margin: '0 auto', justifyContent: 'center' }}>
 
   <div style={{ display: 'flex', width: '400%', transition: 'transform 0.4s ease-in-out', transform: `translateX(-${currentIndex * 100}%)` }}>
 
@@ -303,7 +303,7 @@ const Hero = ({ onNextTheme, onPreviousTheme }) => {
 
     {/* First Image */}
 
-    <div className='h-44 md:lg:h-full w-full flex-shrink-0 relative px-1'>
+    <div className='h-44 md:lg:h-full w-full flex-shrink-0 relative px-1 overflow-hidden'>
 
       <img src={p1.src} alt="Post 1" className='w-auto h-full ' />
       <div data-aos="fade-up" data-aos-duration="1000" className='absolute top-8 md:lg:top-28 -right-24 md:lg:right-96 transform -translate-x-1/2 text-white'>
@@ -371,7 +371,7 @@ const Hero = ({ onNextTheme, onPreviousTheme }) => {
 
     {/* Fourth Image */}
 
-    <div className='h-44 md:lg:h-full w-full flex-shrink-0 relative px-1'>
+    <div className='h-44 md:lg:h-full w-full flex-shrink-0 relative px-1 overflow-hidden'>
 
       <img src={p5.src} alt="Post 4" className='w-full h-full  rounded-3xl' />
 

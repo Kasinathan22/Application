@@ -31,7 +31,7 @@ import se from '../../../../public/image/Home/s/S.png'
 
 const Sales = () => {
   return (
-    <div className='w-auto h-full '>
+    <div className='w-auto h-auto '>
   
     <div className="container  mx-auto  py-10 md:lg:pb-10 md:lg:pt-0 px-10 ">
      
@@ -68,7 +68,7 @@ const Sales = () => {
 
 
   </div>
-
+ 
 
 
 </div>
