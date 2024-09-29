@@ -19,14 +19,14 @@ function Ranimation() {
                 transition: { duration: 0.8 },
             });
             setBgColor('linear-gradient(to bottom, #ffffff, #ffffff)'); // White color for image background
-            setContainerBgColor('linear-gradient(to bottom, #ffffff, #C084FC)'); // Gradient from white to purple
+            setContainerBgColor('linear-gradient(to bottom, #ffffff, #ffffff)'); // Gradient from white to purple
         } else {
             controls.start({
                 scale: 0.7,
                 transition: { duration: 0.8 },
             });
             setBgColor('linear-gradient(to bottom, #ffffff, #ffffff)'); // Keep image background consistent
-            setContainerBgColor('linear-gradient(to bottom, #ffffff, #C084FC)'); // Solid purple gradient
+            setContainerBgColor('linear-gradient(to bottom, #ffffff, #ffffff )'); // Solid purple gradient
         }
     }, [inView, controls]);
 
