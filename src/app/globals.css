@@ -153,3 +153,6 @@ body {
 body{
   font-family:"Barlow", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}

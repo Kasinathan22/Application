@@ -17,14 +17,14 @@ function Into() {
   ];
 
   return (
-    <div className="w-auto h-auto pt-10 pb-20">
-          <div className="container  mx-auto  py-10 md:lg:pb-10 md:lg:pt-0 px-10 ">
-        <div className='bg-white opacity-90 rounded-3xl py-10'>
+    <div className="w-auto h-auto pt-5 md:lg:pt-10 pb-5 md:lg:pb-20">
+          <div className="container  mx-auto  py-10 md:lg:pb-10 md:lg:pt-0 px-5 md:lg:px-10 ">
+        <div className=' rounded-3xl py-10'>
       {/* Title */}
       <h1 className="text-center text-3xl font-bold text-black mb-8 py-5">Categories</h1>
 
       {/* Image Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 justify-center items-center px-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 md:lg:gap-0 justify-center items-center px-10">
         {/* Map through JSON data */}
         {products.map((product) => (
           <div key={product.id} className="flex flex-col items-center ">

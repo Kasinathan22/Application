@@ -8,6 +8,9 @@ import Sales from "@/components/Home/Sales/Sales";
 import Rshome from "@/components/Home/Rshome/Rshome";
 import Nav from "@/components/Home/Navbar/Nav";
 import Into from "@/components/Home/Into/Into";
+import New from "@/components/Home/New/New";
+import N from "@/components/Home/N/N";
+import Ranimation from "@/components/Home/Ranimation/Ranimation";
 
 const themes = [
   {
@@ -54,7 +57,7 @@ export default function Home() {
   };
 
   return (
-   <main className="w-full font-sans">
+   <main className="w-full h-full font-sans scroll-smooth">
      <Nav textColor={themes[activeIndex].textColor} />
      <Hero 
        onNextTheme={handleNextTheme}
@@ -65,7 +68,9 @@ export default function Home() {
        <>
     
          <Sales />
+         <New />
          <Into />
+         <N />
          <Infitescroll />
 
        </>
@@ -73,6 +78,8 @@ export default function Home() {
 
      {activeIndex === 1 && (
        <>
+       <Rshome />
+      <Ranimation />
          <Services />
        </>
      )}

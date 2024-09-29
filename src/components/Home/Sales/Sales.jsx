@@ -33,14 +33,14 @@ const Sales = () => {
   return (
     <div className='w-auto h-auto '>
   
-    <div className="container  mx-auto  py-10 md:lg:pb-10 md:lg:pt-0 px-10 ">
+    <div className="container  mx-auto  py-10 md:lg:pb-10 md:lg:pt-0 px-5 md:lg:px-10 ">
      
     <div className="bg-black opacity-75 h-screen rounded-3xl">
-  <div className="grid grid-cols-2 h-full">
+  <div className="grid grid-rows-1 md:lg:grid-cols-2  h-full">
     {/* Centered Heading and Paragraph */}
-    <div className="flex flex-col  items-start text-start pl-20">
-      <h1 className="barlow-extrabold text-5xl pt-44">Find Your Perfect Device</h1>
-      <p className="barlow-thin w-96 pt-5 pb-10">
+    <div className="flex flex-col  items-start text-start pl-10 md:lg:pl-20">
+      <h1 className="barlow-extrabold text-xl md:lg:text-5xl pt-20 md:lg:pt-44">Find Your Perfect Device</h1>
+      <p className="barlow-thin w-64 md:lg:w-96 pt-5 pb-10">
         Search for the latest mobiles, laptops, and electronics to discover amazing deals tailored just for you!
       </p>
 
@@ -54,7 +54,7 @@ const Sales = () => {
     </div>
 
     {/* Image Section */}
-    <div className="flex pt-12 ml-32">
+    <div className="flex pt-12 ml-20 md:lg:ml-32">
   <div>
     <img src={s.src} className="w-40" />
   </div>
