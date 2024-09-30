@@ -1,24 +1,24 @@
 "use client"
 import React from 'react';
-import P from "../../../../public/image/SalesPhone/i.png"
-import M from "../../../../public/image/SalesPhone/m.png"
-import W from "../../../../public/image/SalesPhone/w.png"
-import T from "../../../../public/image/SalesPhone/tv.png"
-import S from "../../../../public/image/SalesPhone/s.png"
-import H from "../../../../public/image/SalesPhone/h.png"
+// import P from "../../../../public/image/SalesPhone/i.png"
+// import M from "../../../../public/image/SalesPhone/m.png"
+// import W from "../../../../public/image/SalesPhone/w.png"
+// import T from "../../../../public/image/SalesPhone/tv.png"
+// import S from "../../../../public/image/SalesPhone/s.png"
+// import H from "../../../../public/image/SalesPhone/h.png"
 
 
 function Into() {
   // Sample JSON data for the products
   const products = [
     { id: 1, name: "Laptop", image: "/image/SalesPhone/i.png"},
-    { id: 2, name: "Moblie", image: M },
-    { id: 3, name: "Smart watches", image: W },
-    { id: 4, name: "Product 4", image: T},
-    { id: 5, name: "Product 5", image: S },
-    { id: 6, name: "Product 6", image: H},
-    { id: 7, name: "Product 7", image: P },
-    { id: 8, name: "Product 8", image: M },
+    { id: 2, name: "Moblie", image: "/image/SalesPhone/m.png" },
+    { id: 3, name: "Smart watches", image: "/image/SalesPhone/w.png" },
+    { id: 4, name: "Product 4", image: "/image/SalesPhone/tv.png"},
+    { id: 5, name: "Product 5", image: "/image/SalesPhone/s.png" },
+    { id: 6, name: "Product 6", image: "/image/SalesPhone/h.png"},
+    { id: 7, name: "Product 7", image: "image/SalesPhone/i.png" },
+    { id: 8, name: "Product 8", image: "image/SalesPhone/i.png" },
 
 
   ];
