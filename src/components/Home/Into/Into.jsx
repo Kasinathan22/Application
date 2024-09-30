@@ -11,7 +11,7 @@ import H from "../../../../public/image/SalesPhone/h.png"
 function Into() {
   // Sample JSON data for the products
   const products = [
-    { id: 1, name: "Laptop", image: P},
+    { id: 1, name: "Laptop", image: "/image/SalesPhone/i.png"},
     { id: 2, name: "Moblie", image: M },
     { id: 3, name: "Smart watches", image: W },
     { id: 4, name: "Product 4", image: T},
