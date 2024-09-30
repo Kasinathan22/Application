@@ -30,6 +30,8 @@ export default function Testimonial() {
     <div className="flex items-center justify-center h-screen px-5 md:lg:px-20">
       <div className="w-full h-5/6 md:lg:h-96 p-6 bg-g rounded-3xl shadow-lg text-center relative group">
         {/* Center the image using flexbox */}
+
+        <h1 className='text-xl barlow-black py-3'>Happy Customer</h1>
         <div className="flex justify-center items-center mb-4">
           <img 
             src={msg.src}
@@ -39,10 +41,10 @@ export default function Testimonial() {
         </div>
 
         {/* Center the p tag content horizontally */}
-        <p className="text-xl md:lg:text-2xl font-medium pt-14 md:lg:pt-10 w-72 md:lg:w-9/12 mx-auto">
+        <p className="text-xl md:lg:text-2xl pt-14 barlow-medium md:lg:pt-10 w-72 md:lg:w-9/12 mx-auto">
           {testimonials[currentTestimonial].text}
         </p>
-        <h1 className='text-xl text-black  mt-5 font-extrabold' > {testimonials[currentTestimonial].Name}</h1>
+        <h1 className='text-xl text-black  mt-5 barlow-bold' > {testimonials[currentTestimonial].Name}</h1>
 
         {/* Buttons container */}
         <div className="-mt-80 md:lg:-mt-32 flex justify-between">

@@ -9,30 +9,31 @@ function Ranimation() {
     const [bgColor, setBgColor] = useState('linear-gradient(to bottom, #ffffff, #ffffff)'); // Initialize with white color for background
     const [containerBgColor, setContainerBgColor] = useState('linear-gradient(to bottom, #ffffff, #ffffff)'); // Initialize with white gradient
     const controls = useAnimation();
-    const { ref, inView } = useInView({ threshold: 0.2 });
+    const { ref, inView } = useInView({ threshold: 0.4 });
 
     useEffect(() => {
         // Determine background color based on scroll position
         if (inView) {
             controls.start({
                 scale: 1,
-                transition: { duration: 0.8 },
+                transition: { duration: 0.5 },
             });
-            setBgColor('linear-gradient(to bottom, #ffffff, #ffffff)'); // White color for image background
-            setContainerBgColor('linear-gradient(to bottom, #ffffff, #ffffff)'); // Gradient from white to purple
+            setBgColor('linear-gradient(to bottom, #F7F4F1, #F7F4F1)'); // White color for image background
+            setContainerBgColor('linear-gradient(to bottom, #F7F4F1, #F7F4F1)'); // Gradient from white to purple
         } else {
             controls.start({
-                scale: 0.7,
-                transition: { duration: 0.8 },
+                scale: 5,
+                transition: { duration: 0.5 },
             });
-            setBgColor('linear-gradient(to bottom, #ffffff, #ffffff)'); // Keep image background consistent
-            setContainerBgColor('linear-gradient(to bottom, #ffffff, #ffffff )'); // Solid purple gradient
+            setBgColor('linear-gradient(to bottom, #F7F4F1, #F7F4F1)'); // Keep image background consistent
+            setContainerBgColor('linear-gradient(to bottom, #F7F4F1, #F7F4F1)'); // Solid purple gradient
         }
     }, [inView, controls]);
 
     return (
+
         <div
-            className={`relative flex flex-col items-center justify-center lg:min-h-fit mt-0`} // Remove dynamic bg-color class here
+            className={`relative flex flex-col items-center justify-center lg:min-h-fit mt-0 px-14 overflow-hidden`} // Remove dynamic bg-color class here
             style={{ 
                 width: '100%', 
                 margin: 0, 
@@ -52,7 +53,7 @@ function Ranimation() {
                     }}
                 >
                     {/* Replace video with an image */}
-                    <img src="/image/Home/Real/Ra/a.jpg" alt="Image Description" className="w-full h-screen object-cover" />
+                    <img src="/image/Home/Real/Ra/ho.webp" alt="Image Description" className="w-full h-screen object-cover" />
                 </motion.div>
 
                 <div className="absolute inset-0 z-10 flex flex-col md:flex-row justify-between items-center p-2 sm:p-2 md:p-4 lg:p-8 rounded-lg">

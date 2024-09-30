@@ -11,6 +11,9 @@ import Into from "@/components/Home/Into/Into";
 import New from "@/components/Home/New/New";
 import N from "@/components/Home/N/N";
 import Ranimation from "@/components/Home/Ranimation/Ranimation";
+import BSR from "@/components/Realstate/BSR";
+import Ranimationhome from "@/components/Home/Ranimation/Ranimationhome";
+import RHome from "@/components/Realstate/RHome";
 
 const themes = [
   {
@@ -19,7 +22,7 @@ const themes = [
     
   },
   {
-    backgroundColor: "bg-white",
+    backgroundColor: "bg-[#F7F4F1]",
     textColor: "text-black",
   },
   {
@@ -70,7 +73,9 @@ export default function Home() {
          <Sales />
          <New />
          <Into />
+         <Services />
          <N />
+      
          <Infitescroll />
 
        </>
@@ -78,15 +83,19 @@ export default function Home() {
 
      {activeIndex === 1 && (
        <>
+       <RHome />
+       <BSR />
        <Rshome />
+       <Ranimationhome />
       <Ranimation />
-         <Services />
+      <Testimonials />
+        
        </>
      )}
 
      {activeIndex === 2 && (
        <>
-         <Testimonials />
+        
        </>
      )}
 

@@ -15,6 +15,7 @@ function Rshome() {
                 <h1 className='text-2xl md:lg:text-5xl font-bold text-black'>Experience the Epitome
                 of Refinement</h1>
                 <p className='pt-5 text-gray-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti ratione illo a ut, molestias aperiam nulla minus esse natus labore praesentium voluptates! Ut dolor sed ea quod natus praesentium consequuntur?</p>
+                <p className='pt-5 text-gray-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti ratione illo a ut, molestias aperiam nulla minus esse natus labore praesentium voluptates! Ut dolor sed ea quod natus praesentium consequuntur?</p>
                
                 {/* <div className='grid grid-cols-3 pt-8 gap-7'>
                     <div className='grid grid-cols-2 gap-0'>
@@ -45,7 +46,7 @@ function Rshome() {
 
                     </div>
                 </div> */}
-<div className="flex pt-5">
+{/* <div className="flex pt-5">
   <div className="relative w-full max-w-xs">
     <input
       type="text"
@@ -72,7 +73,7 @@ function Rshome() {
    
     
   </div>
-</div>
+</div> */}
 
 
             </div>
