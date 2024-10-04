@@ -11,20 +11,21 @@ import React from 'react';
 function Into() {
   // Sample JSON data for the products
   const products = [
-    { id: 1, name: "Laptop", image: "/image/SalesPhone/i.png"},
-    { id: 2, name: "Moblie", image: "/image/SalesPhone/m.png" },
-    { id: 3, name: "Smart watches", image: "/image/SalesPhone/w.png" },
-    { id: 4, name: "Product 4", image: "/image/SalesPhone/tv.png"},
-    { id: 5, name: "Product 5", image: "/image/SalesPhone/s.png" },
-    { id: 6, name: "Product 6", image: "/image/SalesPhone/h.png"},
-    { id: 7, name: "Product 7", image: "image/SalesPhone/i.png" },
-    { id: 8, name: "Product 8", image: "image/SalesPhone/i.png" },
+    
+    { id: 1, name: "Washing Machine", image: "/image/SalesPhone/w.png"},
+    { id: 2, name: "AC", image: "/image/SalesPhone/ac.png" },
+    { id: 3, name: "MicroWave", image: "/image/SalesPhone/mic.png" },
+    { id: 4, name: "Refrigerator", image: "/image/SalesPhone/Re.png"},
+    { id: 5, name: "Moblie", image: "/image/SalesPhone/m.png" },
+    { id: 6, name: "Laptop", image: "/image/SalesPhone/i.png"},
+    { id: 7, name: "Tv", image: "image/SalesPhone/tv.png" },
+    { id: 8, name: "Speaker", image: "image/SalesPhone/s.png" },
 
 
   ];
 
   return (
-    <div className="w-auto h-auto pt-5 md:lg:pt-10 pb-5 md:lg:pb-20">
+    <div className="w-auto h-auto pt-5 md:lg:pt-10 pb-5 md:lg:pb-10">
           <div className="container  mx-auto  py-10 md:lg:pb-10 md:lg:pt-0 px-5 md:lg:px-10 ">
         <div className=' rounded-3xl py-10'>
       {/* Title */}
@@ -36,7 +37,7 @@ function Into() {
         {products.map((product) => (
           <div key={product.id} className="flex flex-col items-center ">
             <img src={product.image} alt={product.name} className=" w-36 rounded-full bg-g transition-transform duration-300 ease-in-out transform hover:scale-110" />
-            <h1 className="text-xl mt-4 text-black pb-5">{product.name}</h1>
+            <h1 className="text-base mt-4 text-black pb-5">{product.name}</h1>
           </div>
         ))}
       </div>

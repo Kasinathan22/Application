@@ -26,7 +26,7 @@ const themes = [
     textColor: "text-black",
   },
   {
-    backgroundColor: "bg-lg",
+    backgroundColor: "bg-[#FFFFFF]",
     textColor: "text-black",
   },
   {

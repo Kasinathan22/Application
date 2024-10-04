@@ -35,7 +35,7 @@ function New() {
  
 
  
-  <div className="bg-[url('/image/Home/Ad/third.jpg')] rounded-3xl bg-cover bg-center shadow-md p-6 flex">
+  <div className="bg-[url('/image/Home/Ad/AC.jpg')] rounded-3xl bg-cover bg-center shadow-md p-6 flex">
   <div className='pt-2'>
     <h1 className='barlow-extrabold text-sm md:lg:text-xl'>Bose SoundLink Micro</h1>
     <h1 className='pt-2 text-base'>Shop <ArrowForwardIcon /></h1>
@@ -51,7 +51,7 @@ function New() {
   </div>
 </div>
 
-        <div className="h-96 md:lg:h-auto  w-full flex-1   bg-[url('/image/Home/Ad/az.jpg')] rounded-3xl" >
+        <div className="h-96 md:lg:h-auto  w-full flex-1 bg-cover bg-center  bg-[url('/image/Home/Ad/Re.jpg')] rounded-3xl" >
         <div className='pl-3 pt-5'>
     <h1 className='barlow-extrabold text-sm md:lg:text-xl'>Bose SoundLink Micro</h1>
     <h1 className='pt-2 text-base'>Shop <ArrowForwardIcon /></h1>

@@ -3,22 +3,31 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import img1 from '../../../../public/image/Home/pho/ph.jpg';
-import img2 from '../../../../public/image/Home/p/a2.png';
-import img3 from '../../../../public/image/Home/p/c2.png';
-import img4 from '../../../../public/image/Home/p/d2.png';
-import img5 from '../../../../public/image/Home/p/b2.png';
+import img1 from '../../../../public/image/Home/p/ws.png';
+import img2 from '../../../../public/image/Home/p/res.png';
+import img3 from '../../../../public/image/Home/p/a.png';
+import img4 from '../../../../public/image/Home/p/ms.png';
+import img5 from '../../../../public/image/Home/p/a2.png';
+import img6 from '../../../../public/image/Home/pho/ph.jpg';
+import img7 from '../../../../public/image/Home/p/a2.png';
+import img8 from '../../../../public/image/Home/p/c2.png';
+import img9 from '../../../../public/image/Home/p/d2.png';
+import img10 from '../../../../public/image/Home/p/b2.png';
 
 const Services = () => {
   const components = [
     { imageSrc: img1, title: 'Smart Phone',price:'Rs.500' },
-    { imageSrc: img2, title: 'Laptop',price:'Rs.500' },
-    { imageSrc: img3, title: 'Headphone',price:'Rs.500' },
-    { imageSrc: img4, title: 'Earphone',price:'Rs.500' },
-    { imageSrc: img5, title: 'Smart watch',price:'Rs.500' },
-    { imageSrc: img2, title: 'Tev',price:'Rs.500' },
-    { imageSrc: img3, title: 'Ac' ,price:'Rs.500'},
-    { imageSrc: img4, title: 'Monitor',price:'Rs.500' },
+    { imageSrc: img2, title: 'Smart Phone',price:'Rs.500' },
+    { imageSrc: img3, title: 'Smart Phone',price:'Rs.500' },
+    { imageSrc: img4, title: 'Smart Phone',price:'Rs.500' },
+    { imageSrc: img5, title: 'Smart Phone',price:'Rs.500' },
+    { imageSrc: img6, title: 'Laptop',price:'Rs.500' },
+    { imageSrc: img7, title: 'Headphone',price:'Rs.500' },
+    { imageSrc: img8, title: 'Earphone',price:'Rs.500' },
+    { imageSrc: img9, title: 'Smart watch',price:'Rs.500' },
+    { imageSrc: img10, title: 'Tev',price:'Rs.500' },
+    { imageSrc: img10, title: 'Ac' ,price:'Rs.500'},
+    { imageSrc: img10, title: 'Monitor',price:'Rs.500' },
   ];
 
   const [startIndex, setStartIndex] = useState(0);
@@ -63,7 +72,7 @@ const Services = () => {
     <div className="container mx-auto py-12">
       {/* Flex container to align heading and buttons */}
       <div className="flex justify-between items-center mb-8 px-10">
-        <h1 className="text-2xl md:lg:text-4xl font-bold">Moblie</h1>
+        <h1 className="text-2xl md:lg:text-4xl font-bold">Service</h1>
         
         {/* Navigation buttons */}
         <div className="flex ">
