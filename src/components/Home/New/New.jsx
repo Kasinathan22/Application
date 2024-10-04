@@ -10,7 +10,7 @@ function New() {
 
         <div className=" h-full flex flex-col md:flex-row px-2 py-2 rounded-3xl text-black">
  
-    <div className="w-full h-full md:lg:w-1/2 bg-cover bg-center  rounded-3xl bg-[url('/image/Home/Ad/le.jpg')]">
+    <div className="w-full h-full md:lg:w-1/2 bg-cover bg-center  rounded-3xl bg-[url('/image/Home/Ad/z.jpg')]">
 
     <div className="flex flex-col pt-7 pl-7   bg-cover bg-center">
   <h1 className="barlow-extralight">Application Bazaar</h1>
@@ -32,12 +32,7 @@ function New() {
      
         <div className="flex-1 bg-cover bg-center grid grid-cols-2 gap-1  rounded-3xl">
 
-  <div className="bg-[url('/image/Home/Ad/sz.jpg')] rounded-3xl bg-cover bg-center shadow-md p-6 flex ">
-    <div className='pt-2'>
-    <h1 className='barlow-extrabold text-sm md:lg:text-xl'>Apple watch 2024</h1>
-    <h1 className='pt-2 text-base'>Shop <ArrowForwardIcon /></h1>
-    </div>
-  </div>
+ 
 
  
   <div className="bg-[url('/image/Home/Ad/third.jpg')] rounded-3xl bg-cover bg-center shadow-md p-6 flex">
@@ -46,9 +41,17 @@ function New() {
     <h1 className='pt-2 text-base'>Shop <ArrowForwardIcon /></h1>
     </div>
   </div>
+
+
+  <div className="bg-[url('/image/Home/Ad/aa.jpg')] rounded-3xl bg-cover bg-center shadow-md p-6 flex ">
+    <div className='pt-1'>
+    <h1 className='barlow-extrabold text-sm md:lg:text-xl'>Apple watch 2024</h1>
+    <h1 className='pt-1 text-base'>Shop <ArrowForwardIcon /></h1>
+    </div>
+  </div>
 </div>
 
-        <div className="h-96 md:lg:h-auto  w-full flex-1 bg-cover bg-center bg-[url('/image/Home/Ad/four.jpg')] rounded-3xl" >
+        <div className="h-96 md:lg:h-auto  w-full flex-1   bg-[url('/image/Home/Ad/az.jpg')] rounded-3xl" >
         <div className='pl-3 pt-5'>
     <h1 className='barlow-extrabold text-sm md:lg:text-xl'>Bose SoundLink Micro</h1>
     <h1 className='pt-2 text-base'>Shop <ArrowForwardIcon /></h1>
