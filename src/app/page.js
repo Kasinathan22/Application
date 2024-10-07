@@ -14,6 +14,7 @@ import Ranimation from "@/components/Home/Ranimation/Ranimation";
 import BSR from "@/components/Realstate/BSR";
 import Ranimationhome from "@/components/Home/Ranimation/Ranimationhome";
 import RHome from "@/components/Realstate/RHome";
+import SerHero from "@/components/Service/SerHero/SerHero";
 
 const themes = [
   {
@@ -95,7 +96,7 @@ export default function Home() {
 
      {activeIndex === 2 && (
        <>
-        
+        <SerHero /> 
        </>
      )}
 
