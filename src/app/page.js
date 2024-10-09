@@ -15,6 +15,8 @@ import BSR from "@/components/Realstate/BSR";
 import Ranimationhome from "@/components/Home/Ranimation/Ranimationhome";
 import RHome from "@/components/Realstate/RHome";
 import SerHero from "@/components/Service/SerHero/SerHero";
+import Sellhero from "@/components/Sell/SellHero/Sellhero";
+import SellIcon from "@/components/Sell/SellIcon/SellIcon";
 
 const themes = [
   {
@@ -62,53 +64,57 @@ export default function Home() {
 
   return (
    <main className="w-full h-full font-sans scroll-smooth">
-     <Nav textColor={themes[activeIndex].textColor} />
-     <Hero 
-       onNextTheme={handleNextTheme}
-       onPreviousTheme={handlePreviousTheme}
-     />
+    <Nav textColor={themes[activeIndex].textColor} />
+    <Hero
+      onNextTheme={handleNextTheme}
+      onPreviousTheme={handlePreviousTheme}
+    />
 
-     {activeIndex === 0 && (
-       <>
+    {activeIndex === 0 && (
+      <>
     
-         <Sales />
-         <New />
-         <Into />
-         <Services />
-         <N />
-      
-         <Infitescroll />
+        <Sales />
+        <New />
+        <Into />
+        <Services />
+        <N />
+        <Infitescroll />
 
-       </>
-     )}
+      </>
+    )}
 
-     {activeIndex === 1 && (
-       <>
-       <RHome />
-       <BSR />
-       <Rshome />
-       <Ranimationhome />
+    {activeIndex === 1 && (
+      <>
+      <RHome />
+      <BSR />
+      <Rshome />
+      <Ranimationhome />
       <Ranimation />
       <Testimonials />
         
-       </>
-     )}
+      </>
+    )}
 
-     {activeIndex === 2 && (
-       <>
-        <SerHero /> 
-       </>
-     )}
+    {activeIndex === 2 && (
+      <>
+        <SerHero />
+      </>
+    )}
 
-     {activeIndex === 3 && (
-       <>
-         <Sales />
-         <Infitescroll />
-         <Rshome />
-         <Services />
-         <Testimonials />
-       </>
-     )}
-   </main>
+    {activeIndex === 3 && (
+      <>
+        <Sellhero />
+        <SellIcon />
+      </>
+    )}
+     {activeIndex === 4 && (
+      <>
+        <SerHero />
+      </>
+    )}
+    
+
+
+  </main>
   );
 }

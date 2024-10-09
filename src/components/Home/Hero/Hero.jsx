@@ -48,7 +48,7 @@ const Hero = ({ onNextTheme, onPreviousTheme }) => {
   // Handle going to the previous image
   const goToPrev = () => {
     setCurrentIndex((prevIndex) => {
-      const newIndex = (prevIndex - 1 + 4) % 4; // Change the number to match the number of images
+      const newIndex = (prevIndex - 1 + 5) % 5; // Change the number to match the number of images
       if (newIndex === 1) { // Check if the new index is 1 (second image)
         setAnimateSecondText(true); // Set animation for the second text
       } else {
